@@ -9,3 +9,4 @@ chromadb
 langchain-groq
 python-dotenv
 streamlit
+feedparser

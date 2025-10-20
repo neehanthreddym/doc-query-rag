@@ -20,6 +20,6 @@ COLLECTION_NAME = "pdf_documents"
 
 # --- LLM and API KEYS ---
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-GROQ_MODEL_NAME = "gemma2-9b-it"
+GROQ_MODEL_NAME = "llama-3.1-8b-instant"
 LLM_TEMPERATURE = 0.1
-LLM_MAX_TOKENS = 2048
+LLM_MAX_TOKENS = 130000

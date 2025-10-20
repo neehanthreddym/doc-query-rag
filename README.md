@@ -1,4 +1,4 @@
-# DocQuery: Retrieval-Augmented Generation Pipeline
+# DocQuery: Research Q&A Bot
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/streamlit-1.x-FF4B4B.svg)](https://streamlit.io/)
@@ -7,11 +7,15 @@
 [![Groq](https://img.shields.io/badge/Groq-API-red.svg)](https://groq.com/)
 [![uv](https://img.shields.io/badge/uv-Package%20Manager-orange.svg)](https://docs.astral.sh/uv/)
 
-This project implements a Retrieval-Augmented Generation (RAG) pipeline for querying unstructured PDF documents.  
-It combines embeddings, vector search, and a large language model to return context-aware answers in real time.
-`Note`: Right now data is limited, in future data gets updated or you can 
+This project implements a Retrieval-Augmented Generation (RAG) pipeline for querying unstructured PDF documents (Research Papers from arXiv).
 
-## 📊 Workflow
+This bot will summarize the Research papers related to AI/ML in response to the user query about a Research Paper.
+
+It combines embeddings, vector search, and a large language model to return context-aware answers in real time.
+
+`Note`: Limited Data
+
+## 📊 Application Workflow
 <p align="center">
   <img src="assets/RAG-pipeline.svg" alt="RAG Workflow" width="600">
 </p>
@@ -56,14 +60,14 @@ python main.py --build
 ```bash
 streamlit run app.py
 ```
-or
-click on this link to view the app [DocQuery]()
 
-Type your query, and get context-aware answers.
+Type your query about a research paper published, and get context-aware answers.
 
 ## 📂 Project Structure
 ```
 .
+├── index_evaluation/        # Similarity search techniques Benchmarking
+│   ├── vector_store_interface.py       # Common interface for benchmarking different ANN techniques
 ├── core/                    # Core components
 │   ├── data_loader.py       # PDF loading + chunking
 │   ├── embedding_manager.py # Embedding generation
@@ -89,8 +93,8 @@ Type your query, and get context-aware answers.
 └── README.md
 ```
 
-## Future work
-- Benchmark the retrieval strategies
+## To-Do
+- Benchmark the retrieval strategies and integrate the best in the Q&A Bot.
 
 ## Reference
 - https://www.youtube.com/watch?v=fZM3oX4xEyg&list=PLZoTAELRMXVM8Pf4U67L4UuDRgV4TNX9D

@@ -7,7 +7,6 @@ from langchain_groq import ChatGroq
 import config
 import argparse
 import streamlit as st
-import os
 
 def build_database():
     """Loads, splits, and embeds documents into the vector store."""
@@ -57,7 +56,7 @@ def query_rag(query: str):
     pipeline = RAGPipeline(retriever, llm)
     
     # Get answer
-    result = pipeline.ask(query=query, top_k=5)
+    result = pipeline.ask(query=query, top_k=10)
     
     # Print results
     # print("\n--- 📝 RAG System Response ---")
@@ -82,12 +81,12 @@ if __name__ == "__main__":
         build_database()
     else:
         def main():
-            st.title("RAG Q&A System Demo")
-            st.write(f"**Example topics**: Similarity search, Retrieval-Augmented Generation, Approximate Nearest Neighbor Search")
+            st.title("Q&A Bot")
+            st.write("Research Assistant for AI/ML Papers using RAG System")
 
             query = st.text_input("Enter your query:")
             if st.button("Submit Query") and query:
-                with st.spinner("Querying RAG system..."):
+                with st.spinner("Querying the corpus of available documents..."):
                     try:
                         result = query_rag(query)
                         if result:
