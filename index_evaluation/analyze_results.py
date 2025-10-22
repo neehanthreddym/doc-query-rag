@@ -351,8 +351,7 @@ For this RAG-based Q&A system, we recommend evaluating the algorithms based on y
 
 ---
 
-**Generated**: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}
-"""
+**Generated**: """ + pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')
     
     with open(report_file, 'w') as f:
         f.write(report)

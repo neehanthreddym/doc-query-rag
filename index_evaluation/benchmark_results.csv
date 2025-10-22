@@ -1,0 +1,4 @@
+algorithm,build_time_s,qps,avg_latency_ms,recall_at_10,memory_mb
+"Annoy (n_trees=10, metric=angular)",2.3456,1245.67,0.8032,0.95,45.23
+"FAISS-HNSW (M=32, ef_construction=200, ef_search=100)",3.7812,987.45,1.0127,0.985,68.91
+"ScaNN (num_leaves=100, num_leaves_to_search=10)",4.1234,1523.89,0.6565,0.97,82.45

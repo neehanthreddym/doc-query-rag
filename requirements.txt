@@ -16,3 +16,4 @@ pandas
 matplotlib
 psutil
 numpy
+tabulate

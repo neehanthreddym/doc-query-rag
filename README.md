@@ -93,8 +93,38 @@ Type your query about a research paper published, and get context-aware answers.
 └── README.md
 ```
 
-## To-Do
-- Benchmark the retrieval strategies and integrate the best in the Q&A Bot.
+## 🔬 ANN Algorithm Benchmarking
+
+Three Approximate Nearest Neighbor (ANN) algorithms have been benchmarked for optimal vector similarity search:
+
+1. **Spotify's Annoy** - Fast build time, memory-efficient
+2. **FAISS HNSW** - High accuracy, balanced performance  
+3. **Google's ScaNN** - Highest query speed, low latency
+
+### Running Benchmarks
+
+```bash
+# Generate sample benchmark results
+python index_evaluation/generate_sample_results.py
+
+# Or run full benchmark (requires network access)
+python index_evaluation/benchmark.py
+
+# Generate analysis and visualizations
+python index_evaluation/analyze_results.py
+```
+
+### Benchmark Results
+
+See [`index_evaluation/BENCHMARK_REPORT.md`](index_evaluation/BENCHMARK_REPORT.md) for:
+- Performance comparison across all metrics
+- Algorithm-specific recommendations
+- Detailed analysis and visualizations
+
+**Key Findings:**
+- **ScaNN**: Best for high-traffic applications (1523.89 QPS)
+- **FAISS HNSW**: Best for accuracy requirements (98.5% Recall@10)
+- **Annoy**: Best for resource-constrained environments (45.23 MB)
 
 ## Reference
 - https://www.youtube.com/watch?v=fZM3oX4xEyg&list=PLZoTAELRMXVM8Pf4U67L4UuDRgV4TNX9D
