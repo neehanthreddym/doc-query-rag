@@ -10,3 +10,9 @@ langchain-groq
 python-dotenv
 streamlit
 feedparser
+annoy
+scann
+pandas
+matplotlib
+psutil
+numpy

@@ -19,4 +19,10 @@ dependencies = [
     "sentence-transformers>=5.1.0",
     "streamlit>=1.49.1",
     "streamlit-tags>=1.2.8",
+    "annoy>=1.17.3",
+    "scann>=1.3.2",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "psutil>=5.9.0",
+    "numpy>=1.24.0",
 ]
