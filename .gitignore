@@ -24,7 +24,7 @@ pip-delete-this-directory.txt
 # Data and logs
 logs/
 *.log
-data/vectore_store/
+/data/vector_store/
 
 # Jupyter Notebooks
 .ipynb_checkpoints/
